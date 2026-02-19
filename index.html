@@ -511,11 +511,22 @@
     .hero { min-height: 80vh; }
     .hero-content { padding: 0 20px 40px; }
     .hero-title-svg { width: 240px; }
-    .hero-group { max-width: 100%; }
-    .hero-group .stats { gap: 10px; }
-    .stat { padding: 14px 16px; }
-    .stat-num { font-size: 22px; }
-    .stat-lbl { font-size: 9px; letter-spacing: 2px; }
+    .hero-group { max-width: 100%; align-items: center; }
+    .hero-group .stats {
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+    }
+    .stat {
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 4px 0;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    .stat-num { font-size: 20px; }
+    .stat-lbl { font-size: 8px; letter-spacing: 2px; margin-top: 1px; }
     .hero-neighbourhood { height: 32px; right: 16px; bottom: 14px; }
     .hero-fade {
       background:
@@ -531,10 +542,10 @@
     .divider { margin-bottom: 24px; }
     .points li { font-size: 15px; padding: 8px 0 8px 20px; }
     .points li::before { font-size: 8px; top: 14px; }
-    .quotes { gap: 16px; margin-top: 32px; }
-    .quote { padding: 16px 20px; }
-    .quote p { font-size: 15px; }
-    .quote-logo { height: 18px; }
+    .quotes { gap: 10px; margin-top: 20px; }
+    .quote { padding: 10px 14px; }
+    .quote p { font-size: 12px; }
+    .quote-logo { height: 14px; margin-top: 6px; }
     .two-col { gap: 24px; }
     .tag { font-size: 11px; padding: 6px 12px; }
     .group-section { min-height: 40vh; }
