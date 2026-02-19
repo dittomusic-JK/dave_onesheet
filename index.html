@@ -99,7 +99,7 @@
     max-width: 520px;
   }
   .hero-group .hero-title-svg {
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
   .hero-group .stats {
     width: 100%;
@@ -141,7 +141,7 @@
   }
 
   section {
-    padding: 40px 0;
+    padding: 28px 0;
   }
 
   .sec-header {
@@ -166,7 +166,7 @@
     display: block;
     max-width: 520px;
     height: auto;
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 
   .album-section {
@@ -197,7 +197,7 @@
     display: block;
     max-width: 600px;
     height: auto;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     margin-left: -48px;
   }
 
@@ -205,7 +205,7 @@
     display: block;
     max-width: 500px;
     height: auto;
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 
   .divider {
@@ -277,6 +277,12 @@
     height: 22px;
     margin-top: 14px;
     opacity: 0.4;
+  }
+  .quotes-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 0;
   }
 
   /* Raindance section with photo bg */
@@ -356,7 +362,7 @@
     margin-bottom: 0;
   }
   .group-section + section {
-    padding-top: 28px;
+    padding-top: 20px;
   }
   .group-img {
     position: absolute;
@@ -592,30 +598,32 @@
     <p class="sec-subtitle">3rd Record-Breaking Album</p>
     <div class="divider"></div>
 
-    <ul class="points">
-      <li>Second Fastest Selling UK Album of the Year 2025 — <em>74k Week 1</em></li>
-      <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
-      <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
-      <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
-      <li>First ever UK Rap song to hit <em>1 Billion streams</em> on Spotify</li>
-      <li><em>4 Sold Out O2 Arena</em> shows in London — March 2026</li>
-    </ul>
+    <div class="two-col">
+      <ul class="points">
+        <li>Second Fastest Selling UK Album of the Year 2025 — <em>74k Week 1</em></li>
+        <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
+        <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
+        <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
+        <li>First ever UK Rap song to hit <em>1 Billion streams</em> on Spotify</li>
+        <li><em>4 Sold Out O2 Arena</em> shows in London — March 2026</li>
+      </ul>
 
-    <div class="quotes">
-      <div class="quote">
-        <p>"Breathtaking in both its clarity of thought and purpose… His esteemed discography's <i>crown jewel</i>"</p>
-        <cite>— Sheldon Pearce, NPR</cite>
-        <img src="deck logos/nprlogo.webp" alt="NPR" class="quote-logo">
-      </div>
-      <div class="quote">
-        <p>"Tracks that emphasise his brilliance as a storyteller" ★★★★★</p>
-        <cite>— Alexis Petridis, The Guardian</cite>
-        <img src="deck logos/theguardian_logo.webp" alt="The Guardian" class="quote-logo">
-      </div>
-      <div class="quote">
-        <p>"A staggeringly <i>powerful</i> record" (9/10)</p>
-        <cite>— Robin Murray, Clash Music</cite>
-        <img src="deck logos/clashlogo_white.webp" alt="Clash Music" class="quote-logo">
+      <div class="quotes quotes-stacked">
+        <div class="quote">
+          <p>"Breathtaking in both its clarity of thought and purpose… His esteemed discography's <i>crown jewel</i>"</p>
+          <cite>— Sheldon Pearce, NPR</cite>
+          <img src="deck logos/nprlogo.webp" alt="NPR" class="quote-logo">
+        </div>
+        <div class="quote">
+          <p>"Tracks that emphasise his brilliance as a storyteller" ★★★★★</p>
+          <cite>— Alexis Petridis, The Guardian</cite>
+          <img src="deck logos/theguardian_logo.webp" alt="The Guardian" class="quote-logo">
+        </div>
+        <div class="quote">
+          <p>"A staggeringly <i>powerful</i> record" (9/10)</p>
+          <cite>— Robin Murray, Clash Music</cite>
+          <img src="deck logos/clashlogo_white.webp" alt="Clash Music" class="quote-logo">
+        </div>
       </div>
     </div>
   </div>
