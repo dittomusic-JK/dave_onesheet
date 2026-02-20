@@ -539,24 +539,26 @@
      ═══════════════════════════════════════════ */
   @media (max-width: 540px) {
     .container { padding: 0 20px; }
-    .hero { min-height: auto; padding-top: 40px; padding-bottom: 40px; }
+    .hero { min-height: auto; padding-top: 30px; padding-bottom: 30px; }
+    .hero-img { left: 0; right: 0; }
     .hero-content { padding: 0 20px; }
-    .hero-title-svg { width: 240px; }
-    .hero-group { max-width: 100%; align-items: center; }
+    .hero-title-svg { width: 200px; }
+    .hero-group { max-width: 100%; align-items: flex-start; }
+    .hero-sales { font-size: 16px; margin-bottom: 8px; }
     .hero-group .stats {
-      flex-direction: column;
-      gap: 0;
-      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      align-items: flex-start;
     }
-    .stat-num { font-size: 20px; }
-    .stat-lbl { font-size: 8px; letter-spacing: 2px; margin-top: 1px; }
-    .hero-awards li { font-size: 13px; }
-    .hero-neighbourhood { height: 32px; right: 16px; bottom: 14px; }
+    .stat { text-align: left; }
+    .stat-num { font-size: 18px; }
+    .stat-lbl { font-size: 7px; letter-spacing: 2px; margin-top: 1px; }
+    .hero-awards { margin-top: 10px; }
+    .hero-awards li { font-size: 12px; padding: 2px 0; }
     .hero-fade {
       background:
-        linear-gradient(to right, var(--bg) 5%, rgba(10,10,10,0.85) 20%, rgba(10,10,10,0.4) 50%, transparent 80%),
-        linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.5) 15%, transparent 30%),
-        linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, transparent 12%);
+        rgba(10,10,10,0.75);
     }
     section { padding: 40px 0; }
     .album-title-svg { max-width: 280px; margin-left: 0; }
