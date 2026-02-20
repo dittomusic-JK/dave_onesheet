@@ -101,13 +101,8 @@
     margin-bottom: 16px;
   }
   .stat {
-    background: rgba(196,180,112,0.06);
-    border: 1px solid rgba(196,180,112,0.2);
-    border-radius: 6px;
-    padding: 10px 16px;
+    padding: 4px 0;
     text-align: center;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
   }
   .stat-num {
     font-family: 'EB Garamond', 'Georgia', serif;
@@ -124,6 +119,23 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-top: 4px;
+  }
+
+  .hero-awards {
+    list-style: none;
+    padding: 0;
+    margin-top: 16px;
+  }
+  .hero-awards li {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--text-mid);
+    padding: 3px 0;
+    line-height: 1.4;
+  }
+  .hero-awards li em {
+    color: var(--gold-bright);
+    font-style: italic;
   }
 
 
@@ -517,16 +529,9 @@
       gap: 0;
       align-items: center;
     }
-    .stat {
-      background: none;
-      border: none;
-      border-radius: 0;
-      padding: 4px 0;
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-    }
     .stat-num { font-size: 20px; }
     .stat-lbl { font-size: 8px; letter-spacing: 2px; margin-top: 1px; }
+    .hero-awards li { font-size: 11px; }
     .hero-neighbourhood { height: 32px; right: 16px; bottom: 14px; }
     .hero-fade {
       background:
@@ -587,10 +592,17 @@
         <div class="stat-lbl">UK Singles</div>
       </div>
       <div class="stat">
-        <div class="stat-num">300,000+</div>
+        <div class="stat-num">300,000+ Tickets</div>
         <div class="stat-lbl">2026 World Tour</div>
       </div>
     </div>
+    <ul class="hero-awards">
+      <li>First ever UK Rap song to hit <em>1 Billion streams</em> on Spotify</li>
+      <li><em>2× BRIT Award Winner</em> — Album of the Year</li>
+      <li><em>Mercury Prize Winner</em> — Psychodrama (2019)</li>
+      <li><em>4× Ivor Novello Award</em> — Best Album</li>
+      <li>Festival Headliner — <em>Reading &amp; Leeds (2022 &amp; 2026) // Parklife (2021)</em></li>
+    </ul>
     </div>
   </div>
 </section>
@@ -653,8 +665,7 @@
           <li><em>#1 UK Single</em></li>
           <li><em>#1 Shazam</em> Global Chart</li>
           <li>Top 10 on Spotify Global Chart — <em>3.5M+ Daily Streams</em></li>
-          <li>First ever UK Rap song to hit <em>1 Billion streams</em> on Spotify</li>
-          <li><em>7.5 Billion views</em> across 4 Million public creates on TikTok</li>
+          <li>
           <li>Top 10 UK Airplay — <em>5th Highest played on Capital</em> &amp; growing</li>
           <li>Top 100 on US Billboard chart <em>(#89)</em> &amp; growing</li>
         </ul>
@@ -702,25 +713,6 @@
       <li><em>300,000+ tickets sold</em> across Europe, UK, North America &amp; Australia</li>
       <li>Including <em>4 O2 Arena shows</em> in London</li>
     </ul>
-  </div>
-</section>
-
-
-<!-- ═══════════ CAREER ═══════════ -->
-<section>
-  <div class="container">
-    <div class="divider"></div>
-
-    <div class="two-col">
-      <ul class="points">
-        <li><em>2× BRIT Award Winner</em> — Album of the Year</li>
-        <li><em>Mercury Prize Winner</em> — Psychodrama (2019)</li>
-      </ul>
-      <ul class="points">
-        <li><em>4× Ivor Novello Award</em> — Best Album</li>
-        <li>Festival Headliner — <em>Glastonbury (2024) // Reading &amp; Leeds (2022 &amp; 2026) // Parklife (2021)</em></li>
-      </ul>
-    </div>
   </div>
 </section>
 
