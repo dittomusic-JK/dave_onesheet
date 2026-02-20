@@ -540,11 +540,18 @@
   @media (max-width: 540px) {
     .container { padding: 0 20px; }
     .hero { min-height: auto; padding: 0 0 24px; flex-direction: column; align-items: stretch; }
-    .hero-img { left: 0; right: 0; position: relative; height: 75vw; background-size: 140%; background-position: right top; }
-    .hero-fade {
-      background: linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.6) 30%, rgba(10,10,10,0.2) 55%, transparent 75%);
+    .hero-img {
+      left: 0; right: 0; position: relative; height: 75vw;
+      background-size: 140%; background-position: right top;
+    }
+    .hero-img::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 60%;
+      background: linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.6) 35%, transparent 100%);
       pointer-events: none;
     }
+    .hero-fade { display: none; }
     .hero-content { padding: 0 20px; position: relative; margin-top: -40px; }
     .hero-title-svg { width: 200px; }
     .hero-group { max-width: 100%; align-items: center; text-align: center; }
