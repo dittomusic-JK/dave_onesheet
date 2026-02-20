@@ -539,26 +539,43 @@
      ═══════════════════════════════════════════ */
   @media (max-width: 540px) {
     .container { padding: 0 20px; }
-    .hero { min-height: auto; padding-top: 30px; padding-bottom: 30px; }
-    .hero-img { left: 0; right: 0; }
-    .hero-content { padding: 0 20px; }
+    .hero { min-height: auto; padding: 0 0 24px; flex-direction: column; align-items: stretch; }
+    .hero-img { left: 0; right: 0; position: relative; height: 55vw; background-size: cover; background-position: center top; }
+    .hero-fade {
+      background: linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.3) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content { padding: 0 20px; position: relative; margin-top: -40px; }
     .hero-title-svg { width: 200px; }
-    .hero-group { max-width: 100%; align-items: flex-start; }
-    .hero-sales { font-size: 16px; margin-bottom: 8px; }
+    .hero-group { max-width: 100%; align-items: center; text-align: center; }
+    .hero-sales { font-size: 15px; margin-bottom: 8px; }
     .hero-group .stats {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 4px 16px;
-      align-items: flex-start;
+      gap: 2px 16px;
+      justify-content: center;
     }
-    .stat { text-align: left; }
     .stat-num { font-size: 18px; }
     .stat-lbl { font-size: 7px; letter-spacing: 2px; margin-top: 1px; }
-    .hero-awards { margin-top: 10px; }
-    .hero-awards li { font-size: 12px; padding: 2px 0; }
-    .hero-fade {
-      background:
-        rgba(10,10,10,0.75);
+    .hero-awards {
+      margin-top: 14px;
+      text-align: left;
+      padding-left: 0;
+    }
+    .hero-awards li {
+      font-size: 13px;
+      padding: 4px 0 4px 18px;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .hero-awards li:last-child { border-bottom: none; }
+    .hero-awards li::before {
+      content: '◆';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 6px;
+      top: 9px;
     }
     section { padding: 40px 0; }
     .album-title-svg { max-width: 280px; margin-left: 0; }
