@@ -157,6 +157,60 @@
     margin-bottom: 12px;
   }
 
+  /* Hero 3-column layout */
+  .hero-columns {
+    display: flex;
+    gap: 40px;
+    margin-top: 4px;
+  }
+  .hero-col-title {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hero-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hero-col li {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1.15;
+    text-transform: uppercase;
+    padding: 3px 0;
+  }
+  .hero-highlights {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(196,180,112,0.15);
+    padding-top: 16px;
+  }
+  .hero-highlights li {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1.15;
+    text-transform: uppercase;
+    padding: 3px 0;
+  }
+  .hero-highlights a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(196,180,112,0.4);
+    text-underline-offset: 2px;
+  }
+  .hero-highlights a:hover {
+    text-decoration-color: var(--gold);
+  }
+
 
   /* ═══════════════════════════════════════════
      CONTENT SECTIONS
@@ -377,61 +431,6 @@
   }
 
 
-  /* ═══════════════════════════════════════════
-     GROUP SHOT SECTION
-     ═══════════════════════════════════════════ */
-  .group-section {
-    position: relative;
-    min-height: 40vh;
-    display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    margin-bottom: 0;
-  }
-  .group-section + section {
-    padding-top: 20px;
-  }
-  .group-img {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: url('tour_bg.webp') center top / cover no-repeat;
-    z-index: 0;
-  }
-  .group-fade {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0.5) 70%, transparent 100%),
-      linear-gradient(to bottom, var(--bg) 0%, rgba(10,10,10,0.6) 30%, transparent 50%);
-    z-index: 1;
-  }
-  .group-content {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px 28px;
-  }
-  .group-content .sec-header {
-    font-size: 42px;
-    margin-bottom: 8px;
-  }
-  .group-points {
-    list-style: none;
-    padding: 0;
-  }
-  .group-points li {
-    font-family: var(--body-font);
-    font-size: 19px;
-    color: var(--text);
-    padding: 4px 0;
-    line-height: 1.5;
-  }
-  .group-points li em {
-    color: var(--gold-bright);
-    font-style: italic;
-  }
 
 
   /* ═══════════════════════════════════════════
@@ -524,9 +523,9 @@
     .album-title-svg { max-width: 400px; margin-left: 0; }
     .raindance-svg { max-width: 360px; }
     .section-title-svg { max-width: 360px; }
-    .group-section { min-height: 50vh; }
-    .group-content { padding: 0 32px 40px; }
-    .group-points li { font-size: 18px; }
+    .hero-columns { gap: 28px; }
+    .hero-col li { font-size: 20px; }
+    .hero-highlights li { font-size: 20px; }
     .logo-strip { gap: 24px; }
     .logo-strip img { height: 28px; }
     .socials { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -599,10 +598,9 @@
     .quote-logo { height: 14px; margin-top: 6px; }
     .two-col { gap: 24px; }
     .tag { font-size: 11px; padding: 6px 12px; }
-    .group-section { min-height: 40vh; }
-    .group-content { padding: 0 20px 32px; }
-    .group-content .sec-header { font-size: 32px; }
-    .group-points li { font-size: 16px; }
+    .hero-columns { flex-direction: column; gap: 16px; }
+    .hero-col li { font-size: 15px; }
+    .hero-highlights li { font-size: 15px; }
     .logo-strip { gap: 20px; margin-top: 32px; padding-top: 24px; }
     .logo-strip img { height: 24px; }
     .socials { grid-template-columns: 1fr 1fr; gap: 16px 20px; }
@@ -623,32 +621,36 @@
   <div class="hero-content">
     <div class="hero-group">
     <img src="dave_logo.svg" alt="DAVE" class="hero-title-svg">
-    <p class="hero-sales">3M+ Album Sales &amp; 60M+ Single Sales Globally</p>
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-num">10 Billion+</div>
-        <div class="stat-lbl">Global Streams</div>
+    <div class="hero-columns">
+      <div class="hero-col">
+        <div class="hero-col-title">Sales</div>
+        <ul>
+          <li>10 Billion+ Streams</li>
+          <li>3× #1 Albums</li>
+          <li>4× #1 Singles</li>
+          <li>60M+ Singles Sold Globally</li>
+        </ul>
       </div>
-      <div class="stat">
-        <div class="stat-num">3× #1</div>
-        <div class="stat-lbl">UK Albums</div>
+      <div class="hero-col">
+        <div class="hero-col-title">Awards</div>
+        <ul>
+          <li>3× Brit Award Winner</li>
+          <li>Mercury Prize Winner</li>
+          <li>4× Ivor Novello Award</li>
+        </ul>
       </div>
-      <div class="stat">
-        <div class="stat-num">4× #1</div>
-        <div class="stat-lbl">UK Singles</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">300,000+ Tickets</div>
-        <div class="stat-lbl">2026 World Tour</div>
+      <div class="hero-col">
+        <div class="hero-col-title">Live</div>
+        <ul>
+          <li>300,000+ Tickets 2026 World Tour</li>
+          <li>Reading &amp; Leeds Festival Headliner 2026</li>
+          <li>4 Sold Out London O2's 2026</li>
+        </ul>
       </div>
     </div>
-    <ul class="hero-awards">
-      <li><em>2× BRIT Award Winner</em> — Album of the Year &amp; <a href="https://www.youtube.com/watch?v=mXLS2IzZSdg" target="_blank">iconic performance of <em>Black</em></a></li>
-      <li><em>Mercury Prize Winner</em> — Psychodrama (2019)</li>
-      <li><em>4× Ivor Novello Award</em> — Best Album</li>
-      <li>Festival Headliner — <em>Reading &amp; Leeds (2022 &amp; 2026) // Parklife (2021)</em></li>
-      <li>First ever UK Rap song to hit <em>1 Billion streams</em> on Spotify (<a href="https://www.youtube.com/watch?v=pSY3i5XHHXo" target="_blank"><em>Sprinter</em></a>)</li>
-      <li>5th Highest Viewed <a href="https://www.youtube.com/watch?v=e1vlLJCr9Lo" target="_blank">Glastonbury Performance</a> online ever — <em>Thiago Silva 47M views</em></li>
+    <ul class="hero-highlights">
+      <li>5th Highest Viewed <a href="https://www.youtube.com/watch?v=e1vlLJCr9Lo" target="_blank">Glastonbury Performance</a> Online Ever</li>
+      <li>First Ever UK Rap Song to Hit 1 Billion Streams on Spotify (<a href="https://www.youtube.com/watch?v=pSY3i5XHHXo" target="_blank">Sprinter</a>)</li>
     </ul>
     </div>
   </div>
@@ -670,7 +672,6 @@
         <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
         <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
         <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
-        <li><em>4 Sold Out O2 Arena</em> shows in London — March 2026</li>
       </ul>
 
       <div class="quotes quotes-stacked">
@@ -751,18 +752,6 @@
 </section>
 
 
-<!-- ═══════════ GROUP SHOT / TOUR ═══════════ -->
-<section class="group-section">
-  <div class="group-img"></div>
-  <div class="group-fade"></div>
-  <div class="group-content">
-    <img src="2026worldtour.svg" alt="2026 World Tour" class="section-title-svg">
-    <ul class="group-points">
-      <li><em>300,000+ tickets sold</em> across Europe, UK, North America &amp; Australia</li>
-      <li>Including <em>4 O2 Arena shows</em> in London</li>
-    </ul>
-  </div>
-</section>
 
 
 <!-- ═══════════ FOOTER ═══════════ -->
