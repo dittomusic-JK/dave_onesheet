@@ -245,10 +245,18 @@
   .slide-raindance .raindance-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background:
-      radial-gradient(ellipse at 60% 50%, rgba(196,180,112,0.06) 0%, transparent 60%),
-      var(--bg);
+    background: url('raindance_bg.webp') center center / cover no-repeat;
+    opacity: 0.3;
     z-index: 0;
+  }
+  .slide-raindance .raindance-fade {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.7) 15%, transparent 40%),
+      linear-gradient(to bottom, var(--bg) 0%, rgba(10,10,10,0.7) 15%, transparent 40%),
+      linear-gradient(to right, rgba(10,10,10,0.8) 0%, transparent 25%, transparent 75%, rgba(10,10,10,0.8) 100%);
+    z-index: 1;
   }
 
   .raindance-title {
@@ -367,6 +375,7 @@
 <!-- ═══════════ SLIDE 3 — RAINDANCE ═══════════ -->
 <div class="slide slide-raindance">
   <div class="raindance-bg"></div>
+  <div class="raindance-fade"></div>
   <div class="slide-content">
     <img src="davextems.svg" alt="Dave x Tems — Raindance" class="raindance-title">
     <p class="sec-subtitle">A Current, Global Hit</p>
