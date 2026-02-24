@@ -268,18 +268,18 @@
     font-style: italic;
   }
 
-  /* Quotes — horizontal row at bottom */
-  .quotes-row {
+  /* Quotes — stacked in album column */
+  .quotes-stacked {
     display: flex;
-    gap: 24px;
-    margin-top: 24px;
-    padding-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 16px;
     border-top: 1px solid rgba(196,180,112,0.15);
   }
   .quote {
-    flex: 1;
     border-left: 2px solid var(--gold);
-    padding: 10px 14px;
+    padding: 8px 14px;
     background: rgba(196,180,112,0.04);
     border-radius: 0 6px 6px 0;
   }
@@ -451,6 +451,23 @@
           <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
           <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
         </ul>
+        <div class="quotes-stacked">
+          <div class="quote">
+            <p>"Breathtaking in both its clarity of thought and purpose… His esteemed discography's <i>crown jewel</i>"</p>
+            <cite>— Sheldon Pearce, NPR</cite>
+            <img src="deck logos/nprlogo.webp" alt="NPR" class="quote-logo">
+          </div>
+          <div class="quote">
+            <p>"Tracks that emphasise his brilliance as a storyteller" ★★★★★</p>
+            <cite>— Alexis Petridis, The Guardian</cite>
+            <img src="deck logos/theguardian_logo.webp" alt="The Guardian" class="quote-logo">
+          </div>
+          <div class="quote">
+            <p>"A staggeringly <i>powerful</i> record" (9/10)</p>
+            <cite>— Robin Murray, Clash Music</cite>
+            <img src="deck logos/clashlogo_white.webp" alt="Clash Music" class="quote-logo">
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT: RAINDANCE -->
@@ -493,25 +510,6 @@
             <span class="tag">Saudi Arabia</span>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- QUOTES — horizontal row at bottom -->
-    <div class="quotes-row">
-      <div class="quote">
-        <p>"Breathtaking in both its clarity of thought and purpose… His esteemed discography's <i>crown jewel</i>"</p>
-        <cite>— Sheldon Pearce, NPR</cite>
-        <img src="deck logos/nprlogo.webp" alt="NPR" class="quote-logo">
-      </div>
-      <div class="quote">
-        <p>"Tracks that emphasise his brilliance as a storyteller" ★★★★★</p>
-        <cite>— Alexis Petridis, The Guardian</cite>
-        <img src="deck logos/theguardian_logo.webp" alt="The Guardian" class="quote-logo">
-      </div>
-      <div class="quote">
-        <p>"A staggeringly <i>powerful</i> record" (9/10)</p>
-        <cite>— Robin Murray, Clash Music</cite>
-        <img src="deck logos/clashlogo_white.webp" alt="Clash Music" class="quote-logo">
       </div>
     </div>
   </div>
