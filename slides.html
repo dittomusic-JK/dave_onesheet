@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAVE — The Boy Who Played The Harp — Slides</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=EB+Garamond:wght@400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #c4b470;
+    --gold-bright: #e0d48e;
+    --gold-dim: #9a8f56;
+    --bg: #0a0a0a;
+    --text: #f2efE5;
+    --text-mid: #d0ccbc;
+    --text-dim: #908c7e;
+    --body-font: 'Bodoni Moda', 'Georgia', serif;
+  }
+
+  @page {
+    size: 1920px 1080px;
+    margin: 0;
+  }
+
+  body {
+    background: #000;
+    color: var(--text);
+    font-family: var(--body-font);
+    -webkit-font-smoothing: antialiased;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ═══════════════════════════════════════════
+     SLIDE BASE
+     ═══════════════════════════════════════════ */
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    page-break-after: always;
+    margin: 0 auto 40px;
+  }
+  .slide:last-child {
+    page-break-after: auto;
+    margin-bottom: 0;
+  }
+
+  @media print {
+    body { background: none; }
+    .slide { margin: 0; }
+  }
+
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  /* ═══════════════════════════════════════════
+     SLIDE 1 — HERO
+     ═══════════════════════════════════════════ */
+  .slide-hero .hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('dave_hero.webp') center bottom / cover no-repeat;
+    z-index: 0;
+  }
+  .slide-hero .hero-fade {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      linear-gradient(to right, var(--bg) 18%, rgba(10,10,10,0.92) 32%, rgba(10,10,10,0.55) 52%, rgba(10,10,10,0.15) 72%, transparent 88%),
+      linear-gradient(to top, var(--bg) 0%, rgba(10,10,10,0.5) 12%, transparent 25%),
+      linear-gradient(to bottom, rgba(10,10,10,0.3) 0%, transparent 12%);
+    z-index: 1;
+  }
+
+  .dave-logo {
+    display: block;
+    width: 320px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .hero-columns {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+  }
+  .hero-col { flex: 1; }
+  .hero-col-title {
+    font-family: var(--body-font);
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .hero-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hero-col li {
+    font-family: 'EB Garamond', 'Georgia', serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+    text-transform: uppercase;
+    padding: 4px 0;
+  }
+  .hero-col li .gold {
+    color: var(--gold-bright);
+  }
+
+
+  /* ═══════════════════════════════════════════
+     SLIDE 2 — ALBUM
+     ═══════════════════════════════════════════ */
+  .slide-album .album-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('wide.webp') center center / cover no-repeat;
+    opacity: 0.18;
+    z-index: 0;
+  }
+  .slide-album .album-fade {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      linear-gradient(to bottom, var(--bg) 0%, transparent 22%, transparent 78%, var(--bg) 100%),
+      linear-gradient(to right, var(--bg) 0%, transparent 18%, transparent 82%, var(--bg) 100%);
+    z-index: 1;
+  }
+
+  .album-title {
+    display: block;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: 0;
+    margin-left: -52px;
+  }
+
+  .sec-subtitle {
+    font-family: var(--body-font);
+    font-size: 20px;
+    color: var(--text-dim);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .divider {
+    width: 100px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 24px;
+    opacity: 0.4;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .points {
+    list-style: none;
+    padding: 0;
+  }
+  .points li {
+    font-family: var(--body-font);
+    font-size: 21px;
+    color: var(--text);
+    padding: 8px 0 8px 28px;
+    position: relative;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .points li:last-child { border-bottom: none; }
+  .points li::before {
+    content: '◆';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 10px;
+    top: 15px;
+  }
+  .points li em {
+    color: var(--gold-bright);
+    font-style: italic;
+  }
+
+  .quotes-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .quote {
+    border-left: 2px solid var(--gold);
+    padding: 14px 18px;
+    background: rgba(196,180,112,0.04);
+    border-radius: 0 6px 6px 0;
+  }
+  .quote p {
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.4;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .quote cite {
+    font-family: var(--body-font);
+    font-style: normal;
+    font-size: 13px;
+    color: var(--gold-dim);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .quote-logo {
+    display: block;
+    height: 18px;
+    margin-top: 8px;
+    opacity: 0.4;
+  }
+
+
+  /* ═══════════════════════════════════════════
+     SLIDE 3 — RAINDANCE
+     ═══════════════════════════════════════════ */
+  .slide-raindance .raindance-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(ellipse at 60% 50%, rgba(196,180,112,0.06) 0%, transparent 60%),
+      var(--bg);
+    z-index: 0;
+  }
+
+  .raindance-title {
+    display: block;
+    max-width: 460px;
+    height: auto;
+    margin-bottom: -6px;
+  }
+
+  .tag-group { margin-top: 24px; }
+  .tag-label {
+    font-family: var(--body-font);
+    font-size: 16px;
+    color: var(--gold-dim);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tag {
+    font-family: var(--body-font);
+    font-size: 15px;
+    color: var(--text-mid);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(196,180,112,0.07);
+    border: 1px solid rgba(196,180,112,0.2);
+    border-radius: 6px;
+    padding: 8px 18px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════ SLIDE 1 — HERO ═══════════ -->
+<div class="slide slide-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-fade"></div>
+  <div class="slide-content">
+    <img src="dave_logo.svg" alt="DAVE" class="dave-logo">
+    <div class="hero-columns">
+      <div class="hero-col">
+        <div class="hero-col-title">Sales</div>
+        <ul>
+          <li>10 Billion+ Streams</li>
+          <li>3× #1 Albums</li>
+          <li>5× #1 Singles</li>
+          <li>60M+ Singles Sold Globally</li>
+          <li>First Ever UK Rap Song to Hit 1 Billion Streams on Spotify (<span class="gold">Sprinter</span>)</li>
+        </ul>
+      </div>
+      <div class="hero-col">
+        <div class="hero-col-title">Awards</div>
+        <ul>
+          <li>2× Brit Award Winner</li>
+          <li>Mercury Prize Winner</li>
+          <li>4× Ivor Novello Award</li>
+        </ul>
+      </div>
+      <div class="hero-col">
+        <div class="hero-col-title">Live</div>
+        <ul>
+          <li>300,000+ Tickets 2026 World Tour</li>
+          <li>Reading &amp; Leeds Festival Headliner 2026</li>
+          <li>4 Sold Out London O2's 2026</li>
+          <li>5th Highest Viewed <span class="gold">Glastonbury Performance</span> Online Ever</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════ SLIDE 2 — ALBUM ═══════════ -->
+<div class="slide slide-album">
+  <div class="album-bg"></div>
+  <div class="album-fade"></div>
+  <div class="slide-content">
+    <img src="tbwpth_title.svg" alt="The Boy Who Played The Harp" class="album-title">
+    <p class="sec-subtitle">3rd Record-Breaking Album</p>
+    <div class="divider"></div>
+    <div class="two-col">
+      <ul class="points">
+        <li>Second Fastest Selling UK Album of the Year 2025 — <em>74k Week 1</em></li>
+        <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
+        <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
+        <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
+      </ul>
+      <div class="quotes-stacked">
+        <div class="quote">
+          <p>"Breathtaking in both its clarity of thought and purpose… His esteemed discography's <i>crown jewel</i>"</p>
+          <cite>— Sheldon Pearce, NPR</cite>
+          <img src="deck logos/nprlogo.webp" alt="NPR" class="quote-logo">
+        </div>
+        <div class="quote">
+          <p>"Tracks that emphasise his brilliance as a storyteller" ★★★★★</p>
+          <cite>— Alexis Petridis, The Guardian</cite>
+          <img src="deck logos/theguardian_logo.webp" alt="The Guardian" class="quote-logo">
+        </div>
+        <div class="quote">
+          <p>"A staggeringly <i>powerful</i> record" (9/10)</p>
+          <cite>— Robin Murray, Clash Music</cite>
+          <img src="deck logos/clashlogo_white.webp" alt="Clash Music" class="quote-logo">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════ SLIDE 3 — RAINDANCE ═══════════ -->
+<div class="slide slide-raindance">
+  <div class="raindance-bg"></div>
+  <div class="slide-content">
+    <img src="davextems.svg" alt="Dave x Tems — Raindance" class="raindance-title">
+    <p class="sec-subtitle">A Current, Global Hit</p>
+    <div class="divider"></div>
+    <div class="two-col">
+      <div>
+        <ul class="points">
+          <li><em>#1 UK Single</em></li>
+          <li><em>#1 Video Globally</em> on YouTube</li>
+          <li><em>#1 Shazam</em> Global Chart</li>
+          <li>Top 10 on Spotify Global Chart — <em>3.5M+ Daily Streams</em></li>
+          <li><em>7.5 Billion views</em> across 4 Million public creates on TikTok</li>
+          <li>Top 10 UK Airplay</li>
+          <li>Top 100 on US Billboard Chart</li>
+        </ul>
+      </div>
+      <div>
+        <div class="tag-group">
+          <div class="tag-label">Top 10 Official Charts</div>
+          <div class="tags">
+            <span class="tag">Austria</span>
+            <span class="tag">Australia</span>
+            <span class="tag">Denmark</span>
+            <span class="tag">Germany</span>
+            <span class="tag">Greece</span>
+            <span class="tag">MENA</span>
+            <span class="tag">Netherlands</span>
+            <span class="tag">New Zealand</span>
+            <span class="tag">Nigeria</span>
+            <span class="tag">N. Africa</span>
+            <span class="tag">S. Africa</span>
+            <span class="tag">Sweden</span>
+            <span class="tag">Switzerland</span>
+          </div>
+        </div>
+        <div class="tag-group">
+          <div class="tag-label">Top 20 Official Charts</div>
+          <div class="tags">
+            <span class="tag">France</span>
+            <span class="tag">Norway</span>
+            <span class="tag">Saudi Arabia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
