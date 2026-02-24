@@ -138,30 +138,30 @@
 
   /* Hero socials bar */
   .hero-socials {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 40px;
     margin-top: 32px;
-    padding-top: 20px;
+    padding-top: 24px;
     border-top: 1px solid rgba(196,180,112,0.15);
-    flex-wrap: wrap;
   }
   .hero-social {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
     text-decoration: none;
     color: inherit;
   }
   .hero-social svg {
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
     fill: var(--gold);
     opacity: 0.6;
     flex-shrink: 0;
   }
   .hero-social-name {
     font-family: var(--body-font);
-    font-size: 11px;
+    font-size: 14px;
     color: var(--text-dim);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -169,7 +169,7 @@
   }
   .hero-social-val {
     font-family: 'Bodoni Moda', 'Georgia', serif;
-    font-size: 14px;
+    font-size: 18px;
     color: var(--gold-bright);
     line-height: 1.3;
   }
