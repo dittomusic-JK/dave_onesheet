@@ -95,12 +95,34 @@
 
   .hero-columns {
     display: flex;
-    gap: 50px;
-    max-width: 1100px;
+    flex-wrap: wrap;
+    gap: 40px 60px;
   }
-  .hero-col:nth-child(1) { flex: 1.2; }
-  .hero-col:nth-child(2) { flex: 1; }
-  .hero-col:nth-child(3) { flex: 1.4; }
+  .hero-top-row {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+  }
+  .hero-top-row .hero-col { flex: 1; }
+  .hero-bottom-row {
+    width: 100%;
+    padding-top: 28px;
+    border-top: 1px solid rgba(196,180,112,0.1);
+  }
+  .hero-bottom-row .hero-col li {
+    display: inline;
+    padding: 0;
+  }
+  .hero-bottom-row .hero-col li::after {
+    content: '  ·  ';
+    color: var(--gold-dim);
+  }
+  .hero-bottom-row .hero-col li:last-child::after {
+    content: '';
+  }
+  .hero-bottom-row .hero-col ul {
+    line-height: 1.6;
+  }
   .hero-col-title {
     font-family: var(--body-font);
     font-size: 16px;
@@ -343,32 +365,36 @@
   <div class="slide-content">
     <img src="dave_logo.svg" alt="DAVE" class="dave-logo">
     <div class="hero-columns">
-      <div class="hero-col">
-        <div class="hero-col-title">Sales</div>
-        <ul>
-          <li>10 Billion+ Streams</li>
-          <li>3× #1 Albums</li>
-          <li>5× #1 Singles</li>
-          <li>60M+ Singles Sold Globally</li>
-          <li>First Ever UK Rap Song to Hit 1 Billion Streams on Spotify (<a href="https://www.youtube.com/watch?v=pSY3i5XHHXo" target="_blank">Sprinter</a>)</li>
-        </ul>
+      <div class="hero-top-row">
+        <div class="hero-col">
+          <div class="hero-col-title">Sales</div>
+          <ul>
+            <li>10 Billion+ Streams</li>
+            <li>3× #1 Albums</li>
+            <li>5× #1 Singles</li>
+            <li>60M+ Singles Sold Globally</li>
+            <li>First Ever UK Rap Song to Hit 1 Billion Streams on Spotify (<a href="https://www.youtube.com/watch?v=pSY3i5XHHXo" target="_blank">Sprinter</a>)</li>
+          </ul>
+        </div>
+        <div class="hero-col">
+          <div class="hero-col-title">Awards</div>
+          <ul>
+            <li>2× Brit Award Winner — <a href="https://www.youtube.com/watch?v=mXLS2IzZSdg" target="_blank">iconic performance of <i>Black</i></a></li>
+            <li>Mercury Prize Winner</li>
+            <li>4× Ivor Novello Award</li>
+          </ul>
+        </div>
       </div>
-      <div class="hero-col">
-        <div class="hero-col-title">Awards</div>
-        <ul>
-          <li>2× Brit Award Winner — <a href="https://www.youtube.com/watch?v=mXLS2IzZSdg" target="_blank">iconic performance of <i>Black</i></a></li>
-          <li>Mercury Prize Winner</li>
-          <li>4× Ivor Novello Award</li>
-        </ul>
-      </div>
-      <div class="hero-col">
-        <div class="hero-col-title">Live</div>
-        <ul>
-          <li>300,000+ Tickets 2026 World Tour</li>
-          <li>Reading &amp; Leeds Festival Headliner 2026</li>
-          <li>4 Sold Out London O2's 2026</li>
-          <li>5th Highest Viewed <a href="https://www.youtube.com/watch?v=e1vlLJCr9Lo" target="_blank">Glastonbury Performance</a> Online Ever</li>
-        </ul>
+      <div class="hero-bottom-row">
+        <div class="hero-col">
+          <div class="hero-col-title">Live</div>
+          <ul>
+            <li>300,000+ Tickets 2026 World Tour</li>
+            <li>Reading &amp; Leeds Festival Headliner 2026</li>
+            <li>4 Sold Out London O2's 2026</li>
+            <li>5th Highest Viewed <a href="https://www.youtube.com/watch?v=e1vlLJCr9Lo" target="_blank">Glastonbury Performance</a> Online Ever</li>
+          </ul>
+        </div>
       </div>
     </div>
 
