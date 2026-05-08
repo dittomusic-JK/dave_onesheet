@@ -89,24 +89,16 @@
     height: auto;
   }
 
-  /* Two-column main */
-  .main {
-    display: flex;
-    gap: 50px;
-    flex: 1;
-    min-height: 0;
-  }
-
-  /* Left: Bio */
-  .col-bio {
-    flex: 1.1;
-  }
+  /* Bio */
   .bio {
     font-family: 'EB Garamond', 'Georgia', serif;
     font-size: 19px;
     color: var(--text-mid);
     line-height: 1.5;
     letter-spacing: -0.2px;
+    columns: 2;
+    column-gap: 50px;
+    margin-bottom: 28px;
   }
   .bio p {
     margin-bottom: 12px;
@@ -115,18 +107,9 @@
     margin-bottom: 0;
   }
 
-  /* Right: Album stats */
-  .col-stats {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .album-title {
-    display: block;
-    max-width: 500px;
-    height: auto;
-    margin-bottom: 0;
-    margin-left: -24px;
+  /* Album stats section */
+  .stats-section {
+    margin-top: 8px;
   }
   .sec-subtitle {
     font-family: var(--body-font);
@@ -134,7 +117,7 @@
     color: var(--text-dim);
     letter-spacing: 4px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .divider {
     width: 60px;
@@ -146,17 +129,19 @@
   .points {
     list-style: none;
     padding: 0;
+    columns: 2;
+    column-gap: 50px;
   }
   .points li {
     font-family: var(--body-font);
-    font-size: 20px;
+    font-size: 18px;
     color: var(--text);
-    padding: 5px 0 5px 24px;
+    padding: 5px 0 5px 22px;
     position: relative;
     line-height: 1.4;
     border-bottom: 1px solid rgba(255,255,255,0.04);
+    break-inside: avoid;
   }
-  .points li:last-child { border-bottom: none; }
   .points li::before {
     content: '◆';
     position: absolute;
@@ -223,33 +208,26 @@
       <img src="../tbwpth_title.svg" alt="The Boy Who Played The Harp" class="header-album">
     </div>
 
-    <!-- MAIN -->
-    <div class="main">
+    <!-- BIO (2 cols) -->
+    <div class="bio">
+      <p><b>The Boy Who Played The Harp</b> is Dave's most introspective, spiritually driven, and politically charged album yet. Rooted in concept-driven storytelling, it confronts guilt, shame, hypocrisy, repentance, and the burden of accountability that comes with newfound influence.</p>
+      <p>The title track and album centerpiece examines <b>exploitation in Africa</b> — conflict in the Democratic Republic of Congo, blood diamonds, corrupt leadership, and the ongoing plunder of the continent's resources. It tackles <b>social injustices</b> including the occupation of Palestine, the genocide in Gaza, and the fear of speaking out. Dave also exposes broader hypocrisies: wealthy elites enjoying luxury amid widespread suffering, the gap between performative activism and genuine action, plus the legacies of slavery, colonialism, and selective outrage. On "Fairchild" (feat. Nicole Blakk), he powerfully addresses <b>violence against women and rape culture</b>, critiquing all men while confronting male entitlement, sexual harassment, and complicity.</p>
+      <p>Throughout, Dave draws heavily on biblical imagery, positioning himself as a modern-day David. The harp becomes a metaphor for music's power to soothe torment and serve a higher divine purpose.</p>
+      <p>Across these themes, he questions society and what we must do to improve it, while relentlessly turning the mirror on himself. The title track's central question, <b>"What would I do in the next generation?"</b>, delivers a sobering answer: he already knows, because it depends on what he does right now, today.</p>
+    </div>
 
-      <!-- LEFT: Bio -->
-      <div class="col-bio">
-        <div class="bio">
-          <p><b>The Boy Who Played The Harp</b> is Dave's most introspective, spiritually driven, and politically charged album yet. Rooted in concept-driven storytelling, it confronts guilt, shame, hypocrisy, repentance, and the burden of accountability that comes with newfound influence.</p>
-          <p>The title track and album centerpiece examines <b>exploitation in Africa</b> — conflict in the Democratic Republic of Congo, blood diamonds, corrupt leadership, and the ongoing plunder of the continent's resources. It tackles <b>social injustices</b> including the occupation of Palestine, the genocide in Gaza, and the fear of speaking out. Dave also exposes broader hypocrisies: wealthy elites enjoying luxury amid widespread suffering, the gap between performative activism and genuine action, plus the legacies of slavery, colonialism, and selective outrage. On "Fairchild" (feat. Nicole Blakk), he powerfully addresses <b>violence against women and rape culture</b>, critiquing all men while confronting male entitlement, sexual harassment, and complicity.</p>
-          <p>Throughout, Dave draws heavily on biblical imagery, positioning himself as a modern-day David. The harp becomes a metaphor for music's power to soothe torment and serve a higher divine purpose.</p>
-          <p>Across these themes, he questions society and what we must do to improve it, while relentlessly turning the mirror on himself. The title track's central question, <b>"What would I do in the next generation?"</b>, delivers a sobering answer: he already knows, because it depends on what he does right now, today.</p>
-        </div>
-      </div>
-
-      <!-- RIGHT: Album stats -->
-      <div class="col-stats">
-        <img src="../tbwpth_title.svg" alt="The Boy Who Played The Harp" class="album-title">
-        <p class="sec-subtitle">3rd Record-Breaking Album</p>
-        <div class="divider"></div>
-        <ul class="points">
-          <li>Second Fastest Selling UK Album of the Year 2025 — <em>74k Week 1</em></li>
-          <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
-          <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
-          <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
-          <li><em>300,000+ Tickets</em> — 2026 World Tour</li>
-          <li><em>'Raindance'</em> — #1 UK Single, #1 Global Shazam, #1 YouTube, #5 Spotify Global Chart, Top 50 US Billboard</li>
-        </ul>
-      </div>
+    <!-- ALBUM STATS (2 cols) -->
+    <div class="stats-section">
+      <p class="sec-subtitle">3rd Record-Breaking Album</p>
+      <div class="divider"></div>
+      <ul class="points">
+        <li>Second Fastest Selling UK Album of the Year 2025 — <em>74k Week 1</em></li>
+        <li>First UK Rapper to debut <em>3 Albums at #1</em> in the UK Chart</li>
+        <li>First UK Rapper to have <em>3 Albums in the Top 40</em> simultaneously</li>
+        <li>Fastest Selling Rap Album on Vinyl since <em>OCC Records began</em></li>
+        <li><em>300,000+ Tickets</em> — 2026 World Tour</li>
+        <li><em>'Raindance'</em> — #1 UK Single, #1 Global Shazam, #1 YouTube, #5 Spotify Global Chart, Top 50 US Billboard</li>
+      </ul>
     </div>
 
     <!-- QUOTES -->
